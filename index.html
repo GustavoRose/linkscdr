@@ -3,114 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cheiro de Rosa Sex Shop e Lingerie | Links</title>
+  <title>Cheiro de Rosa | Links</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    /* Reset e Configurações Gerais */
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    
     body {
       font-family: 'Inter', sans-serif;
-      /* Fundo escuro com gradiente suave, estilo "dark mode" da imagem */
-      background: linear-gradient(to bottom, #1a0a0a, #0f0f0f);
-      color: #ffffff; /* Texto branco para alto contraste */
+      
+      /* --- AQUI ESTÁ A MUDANÇA DO DEGRADÊ --- */
+      /* Radial Gradient: Cria um foco de luz no topo */
+      /* #6d0e28 é um vinho avermelhado. Você pode mudar para #ff0000 se quiser vermelho puro */
+      background: radial-gradient(circle at 50% -10%, #6d0e28 0%, #1a050a 45%, #000000 100%);
+      background-attachment: fixed; /* O fundo fica fixo ao rolar */
+      
+      color: #ffffff;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center; /* Centraliza verticalmente */
+      justify-content: center;
       padding: 30px 20px;
     }
 
-    /* Container Principal */
     .container {
       width: 100%;
-      max-width: 420px; /* Largura ideal para mobile */
+      max-width: 400px;
       text-align: center;
     }
 
-    /* Header - Logo e Texto */
-    .header {
-      margin-bottom: 40px;
-    }
-    /* Logo circular */
+    /* HEADER */
+    .header { margin-bottom: 35px; }
+
     .logo-wrapper {
-      width: 100px;
-      height: 100px;
+      width: 110px;
+      height: 110px;
       margin: 0 auto 20px;
       border-radius: 50%;
-      border: 2px solid #ffffff;
+      /* Borda dupla para destaque */
+      border: 3px solid rgba(255,255,255,0.2); 
       padding: 5px;
-      /* Fundo laranja/vermelho para o logo */
-      background: linear-gradient(135deg, #ff6b35, #d81b60);
       display: flex;
       align-items: center;
       justify-content: center;
+      background: rgba(0,0,0,0.3);
+      overflow: hidden;
     }
-    /* Ícone de espiral (simulado) */
-    .logo-icon {
-      font-size: 50px;
-      color: white;
+    
+    .logo-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
     }
+
+    /* Caso não tenha a imagem ainda, este ícone segura o lugar */
+    .logo-placeholder { font-size: 50px; color: #ff8ca3; }
 
     h1 {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       font-weight: 600;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
     }
+
     .location {
-      font-size: 0.9rem;
-      color: #cccccc; /* Cinza claro para informações secundárias */
+      font-size: 0.85rem;
+      color: #ffccd5; /* Um rosa bem clarinho para diferenciar do branco */
       margin-bottom: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 5px;
-    }
-    .description {
-      font-size: 0.85rem;
-      color: #cccccc;
+      gap: 6px;
     }
 
-    /* Botões */
+    .description {
+      font-size: 0.8rem;
+      color: #cccccc;
+      max-width: 80%;
+      margin: 0 auto;
+      line-height: 1.4;
+    }
+
+    /* BOTÕES */
     .button-stack {
       display: flex;
       flex-direction: column;
       gap: 16px;
+      width: 100%;
     }
+
     .btn-link {
       display: flex;
       align-items: center;
-      /* Botão transparente com borda branca, estilo "ghost" */
-      background: transparent;
-      border: 2px solid #ffffff;
-      border-radius: 10px; /* Bordas arredondadas */
-      padding: 14px 20px;
+      background: rgba(255, 255, 255, 0.03); /* Levemente preenchido */
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 12px;
+      padding: 16px 20px;
       text-decoration: none;
       color: #ffffff;
       font-weight: 600;
-      font-size: 0.95rem;
-      transition: background-color 0.2s, transform 0.2s;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
-    /* Efeito de hover */
+
+    /* Efeito de brilho ao passar o mouse */
     .btn-link:hover {
-      background: rgba(255, 255, 255, 0.1); /* Fundo branco translúcido ao passar o mouse */
-      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.15);
+      border-color: #ffccd5;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(109, 14, 40, 0.4); /* Sombra avermelhada */
     }
-    /* Ícone à esquerda */
+
     .btn-icon {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       margin-right: 15px;
-      width: 24px; /* Largura fixa para alinhar ícones */
+      width: 25px;
       text-align: center;
     }
-    /* Texto em maiúsculas */
+
     .btn-text {
       text-transform: uppercase;
+      letter-spacing: 1px;
     }
+
   </style>
 </head>
 <body>
@@ -118,25 +142,34 @@
   <div class="container">
     <header class="header">
       <div class="logo-wrapper">
-        <i class="fas fa-hurricane logo-icon"></i> </div>
-      <h1>Cheiro de Rosa Sex Shop e Lingerie</h1>
-      <div class="location">
-        <i class="fas fa-map-marker-alt"></i> <span>Palhoça - SC</span>
+        <img src="images/avatar.png" class="logo-img" alt="Logo Cheiro de Rosa" onerror="this.style.display='none'; document.querySelector('.logo-placeholder').style.display='block';">
+        <i class="fas fa-wind logo-placeholder" style="display:none;"></i> 
       </div>
+      
+      <h1>Cheiro de Rosa Sex Shop e Lingerie</h1>
+      
+      <div class="location">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Palhoça - SC</span>
+      </div>
+      
       <p class="description">Entrega super discreta e rápida em toda Grande Florianópolis</p>
     </header>
 
     <div class="button-stack">
       <a href="https://cheiroderosa.com.br" class="btn-link">
-        <i class="fas fa-shopping-bag btn-icon"></i> <span class="btn-text">Acessar Catálogo Completo</span>
+        <i class="fas fa-shopping-bag btn-icon"></i>
+        <span class="btn-text">Acessar Catálogo Completo</span>
       </a>
 
       <a href="https://wa.me/5548988048880" class="btn-link">
-        <i class="fab fa-whatsapp btn-icon"></i> <span class="btn-text">FALE COM A GENTE pelo nosso WhatsApp!</span>
+        <i class="fab fa-whatsapp btn-icon"></i>
+        <span class="btn-text">Fale com a gente pelo WhatsApp!</span>
       </a>
 
       <a href="https://goo.gl/maps/SEU_LINK_AQUI" class="btn-link">
-        <i class="fas fa-map-marker-alt btn-icon"></i> <span class="btn-text">Nossa LOCALIZAÇÃO!</span>
+        <i class="fas fa-map-marker-alt btn-icon"></i>
+        <span class="btn-text">Nossa Localização!</span>
       </a>
     </div>
   </div>
