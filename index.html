@@ -16,7 +16,7 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      /* O SEGREDO DO VISUAL: Fundo preto com um "spotlight" vermelho escuro no topo */
+      /* Fundo Preto com o gradiente avermelhado no topo */
       background-color: #000000;
       background-image: radial-gradient(circle at 50% 0%, #4a0d0d 0%, #000000 70%);
       background-repeat: no-repeat;
@@ -27,40 +27,51 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 60px; /* Espaço do topo */
-      padding-bottom: 20px;
+      /* Ajuste aqui: Mais espaço no topo para a logo respirar */
+      padding-top: 50px; 
+      padding-bottom: 30px;
     }
 
     .container {
       width: 100%;
-      max-width: 450px; /* Largura um pouco maior para igualar o print */
+      max-width: 450px;
       padding: 0 20px;
       text-align: center;
     }
 
-    /* --- HEADER --- */
+    /* --- LOGO AJUSTADA --- */
     .logo-wrapper {
-      width: 100px; 
-      height: 100px;
-      margin: 0 auto 15px;
+      /* Tamanho um pouco maior para igualar a referência */
+      width: 115px; 
+      height: 115px;
+      
+      /* Centralização absoluta */
+      margin: 0 auto 20px; 
+      
       border-radius: 50%;
-      /* Borda branca fina ao redor do logo, conforme imagem */
       border: 2px solid #ffffff; 
       overflow: hidden;
       background: #000;
+      
+      /* Garante que a imagem fique centralizada dentro da bolinha */
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .logo-img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: cover; /* Cobre todo o círculo sem distorcer */
     }
 
+    /* --- TEXTOS --- */
     h1 {
-      font-size: 1.25rem; /* 20px */
-      font-weight: 500;
-      margin-bottom: 8px;
+      font-size: 1.25rem;
+      font-weight: 600; /* Levemente mais grosso para destaque */
+      margin-bottom: 10px;
       letter-spacing: 0.3px;
+      line-height: 1.3;
     }
 
     .location {
@@ -70,49 +81,46 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 5px;
+      gap: 6px;
     }
-
-    .location i { font-size: 0.8rem; }
 
     .subtitle {
       font-size: 0.9rem;
       color: #e0e0e0;
-      margin-bottom: 40px; /* Espaço maior antes dos botões */
+      margin-bottom: 45px; /* Espaço maior antes dos botões */
+      padding: 0 10px;
+      line-height: 1.4;
     }
 
-    /* --- BOTÕES (Estilo Outline) --- */
+    /* --- BOTÕES --- */
     .button-stack {
       display: flex;
       flex-direction: column;
-      gap: 15px; /* Espaçamento entre botões */
+      gap: 15px;
     }
 
     .btn {
       display: flex;
       align-items: center;
-      justify-content: flex-start; /* Alinha ícone na esquerda */
+      justify-content: flex-start;
       
-      /* Visual exato do print: Fundo preto/transparente com borda branca */
       background: transparent;
       border: 2px solid #ffffff;
-      border-radius: 12px; /* Cantos arredondados sutis */
+      border-radius: 12px;
       
-      padding: 18px 20px;
+      padding: 16px 20px; /* Altura confortável */
       text-decoration: none;
       color: #ffffff;
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: background 0.2s, transform 0.2s;
-      position: relative;
+      font-size: 0.9rem;
+      font-weight: 600; /* Texto mais forte */
+      text-transform: uppercase; /* Letras maiúsculas como na imagem */
+      transition: background 0.2s;
     }
 
-    /* Efeito ao passar o mouse */
     .btn:hover {
       background: rgba(255, 255, 255, 0.1);
     }
 
-    /* Ícones */
     .btn-icon-box {
       width: 30px;
       display: flex;
@@ -120,14 +128,13 @@
       margin-right: 10px;
     }
 
-    .btn i {
-      font-size: 1.4rem; /* Ícones grandes */
-    }
+    .btn i { font-size: 1.4rem; }
 
     .btn-text {
-      flex: 1; /* Ocupa o resto do espaço */
-      text-align: center; /* Texto centralizado */
-      padding-right: 30px; /* Compensa o ícone para centralizar perfeitamente */
+      flex: 1;
+      text-align: center;
+      padding-right: 30px; /* Compensação visual para centralizar texto */
+      letter-spacing: 0.5px;
     }
 
   </style>
@@ -137,13 +144,13 @@
   <div class="container">
     
     <div class="logo-wrapper">
-      <img src="images/avatar.png" alt="Logo" class="logo-img">
+      <img src="images/avatar.png" alt="Logo Cheiro de Rosa" class="logo-img">
     </div>
 
     <h1>Cheiro de Rosa Sex Shop e Lingerie</h1>
     
     <div class="location">
-      <i class="fas fa-map-marker-alt"></i>
+      <i class="fas fa-map-marker-alt" style="font-size: 0.8rem;"></i>
       <span>Palhoça - SC</span>
     </div>
 
