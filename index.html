@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cheiro de Rosa Sex Shop e Lingerie</title>
-  
+  <title>Cheiro de Rosa • Desejo e Discrição</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,34 +15,32 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #000000;
-      /* Gradiente vermelho no topo */
-      background-image: radial-gradient(circle at 50% 0%, #4a0d0d 0%, #000000 70%);
+      background-color: #000;
+      background-image: radial-gradient(circle at 50% 0%, #4a0d0d 0%, #000 70%);
       background-repeat: no-repeat;
       background-attachment: fixed;
-      color: #ffffff;
+      color: #fff;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 50px; 
-      padding-bottom: 30px;
+      padding: 50px 0 30px;
     }
 
     .container {
       width: 100%;
-      max-width: 450px;
+      max-width: 430px;
       padding: 0 20px;
       text-align: center;
     }
 
     /* LOGO */
     .logo-wrapper {
-      width: 115px; 
-      height: 115px;
-      margin: 0 auto 20px; 
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 22px;
       border-radius: 50%;
-      border: 2px solid #ffffff; 
+      border: 2px solid rgba(255,255,255,0.8);
       overflow: hidden;
       background: #000;
       display: flex;
@@ -50,30 +48,25 @@
       justify-content: center;
     }
 
-    .logo-img { width: 100%; height: 100%; object-fit: cover; }
+    .logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
     /* TEXTOS */
     h1 {
-      font-size: 1.25rem;
+      font-size: 1.35rem;
       font-weight: 600;
-      margin-bottom: 10px;
-      letter-spacing: 0.3px;
-    }
-
-    .location {
-      font-size: 0.9rem;
-      color: #cccccc;
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
+      margin-bottom: 12px;
+      letter-spacing: 0.4px;
     }
 
     .subtitle {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: #e0e0e0;
-      margin-bottom: 45px;
+      margin-bottom: 42px;
+      line-height: 1.4;
       padding: 0 10px;
     }
 
@@ -81,109 +74,112 @@
     .button-stack {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 16px;
     }
 
-    /* Estilo Padrão (Transparente/Outline) - Para Catálogo e Mapa */
     .btn {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
       background: transparent;
-      border: 2px solid #ffffff;
-      border-radius: 12px;
+      border: 2px solid #fff;
+      border-radius: 14px;
       padding: 16px 20px;
       text-decoration: none;
-      color: #ffffff;
+      color: #fff;
       font-size: 0.9rem;
       font-weight: 600;
       text-transform: uppercase;
-      transition: all 0.2s;
+      transition: all 0.25s ease;
     }
 
     .btn:hover {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255,255,255,0.08);
     }
 
-    /* --- ESTILO ESPECIAL PARA O WHATSAPP (DESTAQUE) --- */
+    /* CTA PRINCIPAL */
     .btn-highlight {
-      background: #ffffff; /* Fundo Branco Sólido */
-      border: 2px solid #ffffff;
-      color: #000000; /* Texto Preto para contraste */
-      font-weight: 700; /* Letra mais grossa */
-      transform: scale(1.02); /* Levemente maior que os outros */
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Brilho ao redor */
+      background: #7a1f2b;
+      border: none;
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 0 0 20px rgba(122,31,43,0.6);
+      transform: scale(1.03);
     }
 
     .btn-highlight:hover {
-      background: #e6e6e6; /* Cinza claro ao passar o mouse */
-      transform: scale(1.04);
+      background: #8f2734;
+      transform: scale(1.06);
     }
-    
-    /* Animação de pulso suave no WhatsApp para chamar atenção */
+
     .pulse {
-      animation: pulse-animation 2s infinite;
+      animation: pulse-animation 2.2s infinite;
     }
 
     @keyframes pulse-animation {
-      0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
-      70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+      0% { box-shadow: 0 0 0 0 rgba(122,31,43,0.6); }
+      70% { box-shadow: 0 0 0 12px rgba(122,31,43,0); }
+      100% { box-shadow: 0 0 0 0 rgba(122,31,43,0); }
     }
 
-    /* Ícones e Textos */
     .btn-icon-box {
       width: 30px;
       display: flex;
       justify-content: center;
       margin-right: 10px;
     }
+
     .btn i { font-size: 1.4rem; }
+
     .btn-text {
       flex: 1;
       text-align: center;
       padding-right: 30px;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.6px;
     }
 
+    .trust {
+      font-size: 0.75rem;
+      color: #aaa;
+      margin-top: 28px;
+      line-height: 1.5;
+    }
   </style>
 </head>
+
 <body>
 
   <div class="container">
-    
+
     <div class="logo-wrapper">
-      <img src="images/avatar.png" alt="Logo Cheiro de Rosa" class="logo-img">
+      <img src="images/avatar.png" alt="Cheiro de Rosa" class="logo-img">
     </div>
 
-    <h1>Cheiro de Rosa Sex Shop e Lingerie</h1>
-    
-    <div class="location">
-      <i class="fas fa-map-marker-alt" style="font-size: 0.8rem;"></i>
-      <span>Palhoça - SC</span>
-    </div>
+    <h1>Desejo, prazer e discrição.</h1>
 
-    <p class="subtitle">Entrega super discreta e rápida em toda Grande Florianópolis</p>
+    <p class="subtitle">
+      Seu sex shop na Grande Florianópolis.<br>
+      Entrega rápida, atendimento sigiloso e sem julgamentos.
+    </p>
 
     <div class="button-stack">
-      
-      <a href="https://wa.me/5548988048880?text=Olá!+Vim+pelo+Instagram+e+gostaria+de+atendimento." 
+
+      <a href="https://wa.me/5548988048880?text=Olá!+Vim+pelo+Instagram+e+quero+atendimento."
          class="btn btn-highlight pulse"
-         onclick="fbq('track', 'Contact');"> <div class="btn-icon-box"><i class="fab fa-whatsapp"></i></div>
-        <span class="btn-text">FALE COM A GENTE NO WHATSAPP!</span>
+         onclick="fbq('track', 'Contact');">
+        <div class="btn-icon-box"><i class="fab fa-whatsapp"></i></div>
+        <span class="btn-text">Comprar pelo WhatsApp</span>
       </a>
 
       <a href="https://cheiroderosa.com.br" class="btn">
         <div class="btn-icon-box"><i class="fas fa-shopping-bag"></i></div>
-        <span class="btn-text">Acessar Catálogo Completo</span>
-      </a>
-
-      <a href="https://goo.gl/maps/SEU_LINK_AQUI" class="btn">
-        <div class="btn-icon-box"><i class="fas fa-map-marker-alt"></i></div>
-        <span class="btn-text">Nossa LOCALIZAÇÃO!</span>
+        <span class="btn-text">Ver Catálogo Completo</span>
       </a>
 
     </div>
+
+    <p class="trust">
+      Atendimento discreto • Entrega sigilosa • Total privacidade
+    </p>
 
   </div>
 
