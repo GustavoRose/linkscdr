@@ -3,67 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cheiro de Rosa • Sex Shop & Lingerie</title>
+  <title>Cheiro de Rosa • Desejo e Discrição</title>
 
-  <!-- Fonte -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Pixel do Facebook (se já estiver usando, pode manter o seu) -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'SEU_PIXEL_AQUI');
-    fbq('track', 'PageView');
-  </script>
-
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Inter', sans-serif;
       background-color: #000;
       background-image: radial-gradient(circle at 50% 0%, #4a0d0d 0%, #000 70%);
+      background-repeat: no-repeat;
       background-attachment: fixed;
       color: #fff;
       min-height: 100vh;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       padding: 50px 0 30px;
     }
 
     .container {
       width: 100%;
-      max-width: 420px;
+      max-width: 430px;
       padding: 0 20px;
       text-align: center;
     }
 
     /* LOGO */
     .logo-wrapper {
-      width: 115px;
-      height: 115px;
-      margin: 0 auto 20px;
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 22px;
       border-radius: 50%;
-      border: 2px solid #fff;
+      border: 2px solid rgba(255,255,255,0.8);
       overflow: hidden;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .logo-wrapper img {
+    .logo-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -71,25 +56,17 @@
 
     /* TEXTOS */
     h1 {
-      font-size: 1.25rem;
+      font-size: 1.35rem;
       font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .location-text {
-      font-size: 0.85rem;
-      color: #ccc;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 6px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      letter-spacing: 0.4px;
     }
 
     .subtitle {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: #e0e0e0;
-      margin-bottom: 40px;
+      margin-bottom: 42px;
+      line-height: 1.4;
       padding: 0 10px;
     }
 
@@ -97,76 +74,74 @@
     .button-stack {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 16px;
     }
 
     .btn {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      padding: 16px 20px;
+      background: transparent;
+      border: 2px solid #fff;
       border-radius: 14px;
+      padding: 16px 20px;
       text-decoration: none;
+      color: #fff;
       font-size: 0.9rem;
       font-weight: 600;
       text-transform: uppercase;
-      border: 2px solid #fff;
-      color: #fff;
-      transition: all 0.2s ease;
-      background: transparent;
+      transition: all 0.25s ease;
     }
 
     .btn:hover {
       background: rgba(255,255,255,0.08);
     }
 
-    .btn-icon {
+    /* CTA PRINCIPAL */
+    .btn-highlight {
+      background: #7a1f2b;
+      border: none;
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 0 0 20px rgba(122,31,43,0.6);
+      transform: scale(1.03);
+    }
+
+    .btn-highlight:hover {
+      background: #8f2734;
+      transform: scale(1.06);
+    }
+
+    .pulse {
+      animation: pulse-animation 2.2s infinite;
+    }
+
+    @keyframes pulse-animation {
+      0% { box-shadow: 0 0 0 0 rgba(122,31,43,0.6); }
+      70% { box-shadow: 0 0 0 12px rgba(122,31,43,0); }
+      100% { box-shadow: 0 0 0 0 rgba(122,31,43,0); }
+    }
+
+    .btn-icon-box {
       width: 30px;
       display: flex;
       justify-content: center;
       margin-right: 10px;
-      font-size: 1.4rem;
     }
+
+    .btn i { font-size: 1.4rem; }
 
     .btn-text {
       flex: 1;
       text-align: center;
       padding-right: 30px;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.6px;
     }
 
-    /* WHATSAPP - DESTAQUE */
-    .btn-whatsapp {
-      background: #fff;
-      color: #000;
-      font-weight: 700;
-      transform: scale(1.03);
-      box-shadow: 0 0 18px rgba(255,255,255,0.25);
-    }
-
-    .btn-whatsapp:hover {
-      background: #eaeaea;
-      transform: scale(1.05);
-    }
-
-    .pulse {
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.4); }
-      70% { box-shadow: 0 0 0 12px rgba(255,255,255,0); }
-      100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
-    }
-
-    /* LOCALIZAÇÃO MAIS DISCRETA */
-    .btn-location {
-      opacity: 0.7;
-      font-size: 0.85rem;
-    }
-
-    .btn-location:hover {
-      opacity: 1;
+    .trust {
+      font-size: 0.75rem;
+      color: #aaa;
+      margin-top: 28px;
+      line-height: 1.5;
     }
   </style>
 </head>
@@ -175,57 +150,42 @@
 
   <div class="container">
 
-    <!-- LOGO -->
     <div class="logo-wrapper">
-      <img src="images/avatar.png" alt="Cheiro de Rosa">
+      <img src="images/avatar.png" alt="Cheiro de Rosa" class="logo-img">
     </div>
 
-    <!-- TITULOS -->
-    <h1>Cheiro de Rosa Sex Shop & Lingerie</h1>
-
-    <div class="location-text">
-      <i class="fas fa-map-marker-alt"></i>
-      <span>Palhoça • SC</span>
-    </div>
+    <h1>Desejo, prazer e discrição.</h1>
 
     <p class="subtitle">
-      Entrega super discreta e rápida em toda a Grande Florianópolis
+      Seu sex shop na Grande Florianópolis.<br>
+      Entrega rápida, atendimento sigiloso e sem julgamentos.
     </p>
 
-    <!-- BOTÕES -->
     <div class="button-stack">
 
-      <!-- WHATSAPP -->
-      <a 
-        href="https://wa.me/5548988048880?text=Olá!+Vim+pelo+Instagram+e+gostaria+de+atendimento."
-        class="btn btn-whatsapp pulse"
-        onclick="fbq('track', 'Contact');"
-      >
-        <div class="btn-icon"><i class="fab fa-whatsapp"></i></div>
-        <span class="btn-text">Fale com a gente no WhatsApp</span>
+      <a href="https://wa.me/5548988048880?text=Olá!+Vim+pelo+Instagram+e+quero+atendimento."
+         class="btn btn-highlight pulse"
+         onclick="fbq('track', 'Contact');">
+        <div class="btn-icon-box"><i class="fab fa-whatsapp"></i></div>
+        <span class="btn-text">Comprar pelo WhatsApp</span>
       </a>
 
-      <!-- CATÁLOGO -->
-      <a 
-        href="https://cheiroderosa.com.br"
-        class="btn"
-        onclick="fbq('track', 'ViewContent');"
-      >
-        <div class="btn-icon"><i class="fas fa-shopping-bag"></i></div>
-        <span class="btn-text">Ver catálogo completo</span>
-      </a>
-
-      <!-- LOCALIZAÇÃO -->
-      <a 
-        href="https://goo.gl/maps/SEU_LINK_AQUI"
-        class="btn btn-location"
-        onclick="fbq('track', 'FindLocation');"
-      >
-        <div class="btn-icon"><i class="fas fa-map-marker-alt"></i></div>
-        <span class="btn-text">Ver localização</span>
+      <a href="https://cheiroderosa.com.br" class="btn">
+        <div class="btn-icon-box"><i class="fas fa-shopping-bag"></i></div>
+        <span class="btn-text">Ver Catálogo Completo</span>
       </a>
 
     </div>
+ <!-- LOCALIZAÇÃO (SECUNDÁRIO / CONFIANÇA) -->
+  <a href="https://goo.gl/maps/SEU_LINK_AQUI" class="btn location">
+    <div class="btn-icon-box"><i class="fas fa-map-marker-alt"></i></div>
+    <span class="btn-text">Ver localização</span>
+  </a>
+
+</div>
+    <p class="trust">
+      Atendimento discreto • Entrega sigilosa • Total privacidade
+    </p>
 
   </div>
 
